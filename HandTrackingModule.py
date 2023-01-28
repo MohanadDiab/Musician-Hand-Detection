@@ -48,8 +48,8 @@ class HandDetector:
         # this is the hands detection object
         hands = mp_hands.Hands(
             model_complexity=0,
-            min_detection_confidence=0.9,
-            min_tracking_confidence=0.9)
+            min_detection_confidence=0.7,
+            min_tracking_confidence=0.7)
 
         # values to plot the FPS to the screen
         pTime = 0

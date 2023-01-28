@@ -10,10 +10,10 @@ import HandTrackingModule as htm
 #########  PLACE YOUR VIDEO IN THE VARIABLE VIDEO #######
 
 # e.g Video = 'monkey-dancing.mp4'
-# video = 'piano.mp4'
+video = 'piano.mp4'
 # video = 'accordion.mp4'
 # video = 'guitar.mp4'
-video = 0;
+#video = 0;
 
 #########  KEEP EQUAL TO ZERO IN CASE OF WEBCAM ########
 
@@ -28,7 +28,7 @@ handDetector = htm.HandDetector
 # edges is a boolean defaulting to false
 # set to true in the case of edge detection
 
-myHands = handDetector.handDetector(video= video, edges=True)
+myHands = handDetector.handDetector(video= video, edges=False)
 #zb = handDetector.handDetectorImage('beforePressing.png')
 #za = handDetector.handDetectorImage('afterPressing.png')
 #print('Z before: ' + str(zb))
