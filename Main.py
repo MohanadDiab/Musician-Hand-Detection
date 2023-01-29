@@ -13,7 +13,8 @@ import HandTrackingModule as htm
 video = 'piano.mp4'
 # video = 'accordion.mp4'
 # video = 'guitar.mp4'
-#video = 0;
+# video = 'hands.mp4'
+# video = 0;
 
 #########  KEEP EQUAL TO ZERO IN CASE OF WEBCAM ########
 
