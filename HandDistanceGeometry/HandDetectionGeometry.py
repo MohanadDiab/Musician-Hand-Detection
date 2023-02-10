@@ -27,20 +27,32 @@ coefficients = np.polyfit(x, y, 2)
 
 while True:
     success, img = cap.read()
+    # Creating an instance of the class
     hands, img = detector.findHands(img)
 
     if hands:
         # this corresponds to the first hand that is detected
         if hands[0]:
+
+            # loading the landmark list and the hand's bounding box
             lmlist = hands[0]['lmList']
             p1, p2, p3, p4 = hands[0]['bbox']
+
+            # getting the landamrk positions of the points of intrest
             x1, y1, z1 = lmlist[5]
             x2, y2, z2 = lmlist[17]
+
+            # distance calculation of joints 5, 7
             distance = math.sqrt((y2 - y1) ** 2 + (x1 - x2) ** 2)
+            # loading the coefficients
             A, B, C = coefficients
+            # estimating the depth
             depth = A*distance**2 + B*distance + C
 
-            cvzone .putTextRect(img, f'{int(depth)} cm', (p1, p2) )
+            # printing the result to the bounding box
+            cvzone .putTextRect(img, f'{int(depth)} cm', (p1, p2))
+
+        # doing the same as above for the second hand if it is present
         if len(hands) > 1:
             lmlist1 = hands[1]['lmList']
             p5, p6, p7, p8 = hands[1]['bbox']

@@ -10,8 +10,8 @@ import HandTrackingModule as htm
 #########  PLACE YOUR VIDEO IN THE VARIABLE VIDEO #######
 
 # e.g Video = 'monkey-dancing.mp4'
-video = 'piano.mp4'
-# video = 'accordion.mp4'
+# video = 'piano.mp4'
+video = 'accordion.mp4'
 # video = 'guitar.mp4'
 # video = 'hands.mp4'
 # video = 0;
