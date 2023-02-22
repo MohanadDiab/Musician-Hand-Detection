@@ -100,6 +100,7 @@ class HandDetector:
                     # https://google.github.io/mediapipe/solutions/hands
                     for id, lm in enumerate(hand_landmarks.landmark):
                         px, py, pz = int(lm.x * w), int(lm.y * h), int(lm.z * w)
+                        print(lm)
                         mylmList.append([px, py, pz])
                         xList.append(px)
                         yList.append(py)
